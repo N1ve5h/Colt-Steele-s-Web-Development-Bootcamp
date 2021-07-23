@@ -6,7 +6,13 @@ body {
   background-color: #000033;
 }
 nav {
-  display: flexbox;
+  display: flex;
+  justify-content: flex-end;
+}
+li {
+  display: inline;
+  margin: 0 10px;
+  padding: 0;
 }
 a {
   text-decoration: none;
