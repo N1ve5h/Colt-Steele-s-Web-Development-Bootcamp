@@ -47,4 +47,13 @@ p {
   text-align: left;
   letter-spacing: 0.8px;
   font-size: 16px;
+  margin-top: 1rem;
+}
+
+.work li {
+  text-align: left;
+  letter-spacing: 0.8px;
+  font-size: 16px;
+  list-style-type: "-";
+  padding-left: 15px;
 }
