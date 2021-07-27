@@ -50,7 +50,8 @@ p {
   margin-top: 1rem;
 }
 
-.work li {
+.work li,
+.edu li {
   text-align: left;
   letter-spacing: 0.8px;
   font-size: 16px;
