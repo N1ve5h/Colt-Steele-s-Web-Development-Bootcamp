@@ -9,7 +9,7 @@ nav {
   display: flex;
   justify-content: flex-end;
 }
-li {
+.nav li {
   display: inline;
   margin: 0 10px;
   padding: 0;
@@ -31,12 +31,20 @@ h1 {
   text-align: center;
   font-weight: 800;
   font-size: 30px;
-  text-decoration: underline;
+  text-decoration: wavy underline;
+  letter-spacing: 0.8px;
+}
+
+h2 {
+  text-align: left;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
   letter-spacing: 0.8px;
 }
 
 p {
   text-align: left;
   letter-spacing: 0.8px;
-  font-size: 18px;
+  font-size: 16px;
 }
