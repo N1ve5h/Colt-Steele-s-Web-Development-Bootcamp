@@ -58,3 +58,8 @@ p {
   list-style-type: "-";
   padding-left: 15px;
 }
+
+.btn-outline-primary {
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
