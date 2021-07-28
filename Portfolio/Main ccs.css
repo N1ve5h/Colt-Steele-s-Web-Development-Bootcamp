@@ -59,6 +59,11 @@ p {
   padding-left: 15px;
 }
 
+.btn:hover {
+  background-color: #8c00ff;
+  color: aqua;
+}
+
 .btn-outline-primary {
   color: #0d6efd;
   border-color: #0d6efd;
