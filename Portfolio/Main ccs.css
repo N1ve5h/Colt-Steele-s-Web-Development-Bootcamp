@@ -32,7 +32,10 @@ h1 {
   font-weight: 800;
   font-size: 30px;
   text-decoration: wavy underline;
+  padding-bottom: 0em;
   letter-spacing: 0.8px;
+  margin-bottom: 50px;
+  text-underline-offset: 5px;
 }
 
 h2 {
