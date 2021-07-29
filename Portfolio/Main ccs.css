@@ -62,6 +62,11 @@ p {
   padding-left: 15px;
 }
 
+.btn {
+  padding: 0.1rem 0.75rem;
+  font-size: 0.8rem;
+}
+
 .btn:hover {
   background-color: #8c00ff;
   color: aqua;
