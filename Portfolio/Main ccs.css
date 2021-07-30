@@ -2,23 +2,23 @@
   font-family: "Ubuntu", sans-serif;
   color: #7fb3d5;
 }
+
 body {
   background-color: #000033;
 }
-nav {
-  display: flex;
-  justify-content: flex-end;
-}
+
 .nav li {
   display: inline;
   margin: 0 10px;
   padding: 0;
   text-transform: uppercase;
 }
+
 a {
   text-decoration: none;
   transition: color 0.4s 0s cubic-bezier(1, 0, 1, 1);
 }
+
 a:hover {
   color: #0050fc;
 }
