@@ -86,3 +86,10 @@ p {
 #contactme {
   text-align: center;
 }
+
+@media (max-width: 576px) {
+  #nav {
+    flex-direction: column !important;
+    float: right !important;
+  }
+}
