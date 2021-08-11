@@ -1,0 +1,15 @@
+span {
+  background-color: red;
+}
+div {
+  background-color: blue;
+}
+.divin {
+  display: inline;
+}
+.spanbl {
+  display: block;
+}
+img {
+  display: inline-block;
+}
