@@ -3,7 +3,7 @@ const hen = {
   eggCount: 0,
   layAnEgg() {
     this.eggCount++;
-    return "EGG;";
+    return "EGG";
   },
 };
 
