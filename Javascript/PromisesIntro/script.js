@@ -24,34 +24,55 @@ const fakeRequestPromise = (url) => {
 };
 
 //Fake CallbackHell
-fakeRequestCallback(
-  "books.com/page1",
-  function (response) {
-    console.log("It Worked!");
-    console.log(response);
-    fakeRequestCallback(
-      "books.com/page2",
-      function (response) {
-        console.log("It Worked Again!");
-        console.log(response);
-        fakeRequestCallback(
-          "books.com/page3",
-          function (response) {
-            console.log("It Worked!");
-            console.log(response);
-          },
-          function (err) {
-            console.log("It Failed!", err);
-          }
-        );
-      },
-      function (err) {
-        console.log("It Failed!", err);
-      }
-    );
-  },
-  function (err) {
-    console.log("It Failed!", err);
-  }
-);
+// fakeRequestCallback(
+//   "books.com/page1",
+//   function (response) {
+//     console.log("It Worked!");
+//     console.log(response);
+//     fakeRequestCallback(
+//       "books.com/page2",
+//       function (response) {
+//         console.log("It Worked Again!");
+//         console.log(response);
+//         fakeRequestCallback(
+//           "books.com/page3",
+//           function (response) {
+//             console.log("It Worked!");
+//             console.log(response);
+//           },
+//           function (err) {
+//             console.log("It Failed!", err);
+//           }
+//         );
+//       },
+//       function (err) {
+//         console.log("It Failed!", err);
+//       }
+//     );
+//   },
+//   function (err) {
+//     console.log("It Failed!", err);
+//   }
+// );
 
+fakeRequestPromise("yelp.com/api/coffee/page1")
+  .then(() => {
+    console.log("Page 1 worked");
+    fakeRequestPromise("yelp.com/api/coffee/page2")
+      .then(() => {
+        console.log("Page 2 worked");
+        fakeRequestPromise("yelp.com/api/coffee/page3")
+          .then(() => {
+            console.log("Page 3 worked");
+          })
+          .catch(() => {
+            console.log("Page 3 failed");
+          });
+      })
+      .catch(() => {
+        console.log("Page 2 failed");
+      });
+  })
+  .catch(() => {
+    console.log("Page 1 failed");
+  });
