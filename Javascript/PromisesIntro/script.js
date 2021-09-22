@@ -23,3 +23,8 @@ const fakeRequestPromise = (url) => {
     })
 }
 
+fakeRequestCallback('books.com', function (){
+    console.log("It Worked!");
+}, function () {
+    console.log("It Failed!");
+})
