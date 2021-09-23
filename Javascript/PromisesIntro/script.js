@@ -55,24 +55,44 @@ const fakeRequestPromise = (url) => {
 //   }
 // );
 
+// fakeRequestPromise("yelp.com/api/coffee/page1")
+//   .then(() => {
+//     console.log("Page 1 worked");
+//     fakeRequestPromise("yelp.com/api/coffee/page2")
+//       .then(() => {
+//         console.log("Page 2 worked");
+//         fakeRequestPromise("yelp.com/api/coffee/page3")
+//           .then(() => {
+//             console.log("Page 3 worked");
+//           })
+//           .catch(() => {
+//             console.log("Page 3 failed");
+//           });
+//       })
+//       .catch(() => {
+//         console.log("Page 2 failed");
+//       });
+//   })
+//   .catch(() => {
+//     console.log("Page 1 failed");
+//   });
+
 fakeRequestPromise("yelp.com/api/coffee/page1")
-  .then(() => {
+  .then((data) => {
     console.log("Page 1 worked");
-    fakeRequestPromise("yelp.com/api/coffee/page2")
-      .then(() => {
-        console.log("Page 2 worked");
-        fakeRequestPromise("yelp.com/api/coffee/page3")
-          .then(() => {
-            console.log("Page 3 worked");
-          })
-          .catch(() => {
-            console.log("Page 3 failed");
-          });
-      })
-      .catch(() => {
-        console.log("Page 2 failed");
-      });
+    console.log(data);
+    return fakeRequestPromise("yelp.com/api/coffee/page2");
   })
-  .catch(() => {
-    console.log("Page 1 failed");
+  .then((data) => {
+    console.log("Page 2 worked");
+    console.log(data);
+    return fakeRequestPromise("yelp.com/api/coffee/page3");
+  })
+  .then((data) => {
+    console.log("Page 3 worked");
+    console.log(data);
+
+  })
+  .catch(()=>{
+    console.log("Request Failed");
   });
