@@ -35,11 +35,17 @@
 //         console.log("Error", err);
 //     });
 
-const fetchBitcoinPrice = async () => {
-    try {
-        const res = await axios.get('https://api.cryptonator.com/api/ticker/btc-usd');
-        console.log(res.data.ticker.price);
-    } catch (e) {
-        console.log("Error ", e)
-    }
+// const fetchBitcoinPrice = async () => {
+//     try {
+//         const res = await axios.get('https://api.cryptonator.com/api/ticker/btc-usd');
+//         console.log(res.data.ticker.price);
+//     } catch (e) {
+//         console.log("Error ", e)
+//     }
+// }
+
+const getDadJoke = async () => {
+    const config = { headers: { Accept : 'application/json'}};
+    const res = await axios.get('https://icanhazdadjoke.com',config);
+    console.log(res);
 }
