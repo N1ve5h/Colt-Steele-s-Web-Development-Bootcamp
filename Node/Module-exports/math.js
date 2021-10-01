@@ -10,4 +10,4 @@ const math = {
     square:square
 }
 
-module.exports = math
+module.exports = math;
