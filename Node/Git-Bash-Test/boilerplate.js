@@ -8,7 +8,7 @@ const folderName = process.argv[2] || "Project"; //Only checks first argument ma
 try {
   fs.mkdirSync(folderName);
   fs.writeFileSync(`${folderName}/index.html`, "");
-  fs.writeFileSync(`${folderName}/main.scss`, "");
+  fs.writeFileSync(`${folderName}/main.sass`, "");
   fs.writeFileSync(`${folderName}/script.js`, "");
 } catch (e) {
     console.log("Error!");
