@@ -1,0 +1,134 @@
+body #root {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+}
+
+body #root .App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1440px) {
+  body #root .App {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+body #root .App > :first-child {
+  border-top-left-radius: 0.7em;
+  border-top-right-radius: 0.7em;
+}
+
+@media (min-width: 1440px) {
+  body #root .App > :first-child {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.7em;
+  }
+}
+
+body #root .App > :last-child {
+  border-bottom-left-radius: 0.7em;
+  border-bottom-right-radius: 0.7em;
+}
+
+@media (min-width: 1440px) {
+  body #root .App > :last-child {
+    border-bottom-left-radius: 0em;
+    border-top-right-radius: 0.7em;
+  }
+}
+
+@media (min-width: 1440px) {
+  body #root .App div {
+    width: 25%;
+  }
+}
+
+body #root .App div .sedans, body #root .App div .suvs, body #root .App div .luxury {
+  width: 70%;
+  margin: 1.5em auto 3em auto;
+}
+
+@media (min-width: 1440px) {
+  body #root .App div .sedans, body #root .App div .suvs, body #root .App div .luxury {
+    width: 62%;
+  }
+}
+
+body #root .App div .sedans img, body #root .App div .suvs img, body #root .App div .luxury img {
+  margin-top: 1.5em;
+  width: 3.5em;
+}
+
+body #root .App div .sedans h1, body #root .App div .suvs h1, body #root .App div .luxury h1 {
+  color: #f2f2f2;
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+body #root .App div .sedans p, body #root .App div .suvs p, body #root .App div .luxury p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9em;
+  line-height: 20px;
+  margin: 2em 0;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+@media (min-width: 1440px) {
+  body #root .App div .sedans p, body #root .App div .suvs p, body #root .App div .luxury p {
+    margin-bottom: 4em;
+  }
+}
+
+body #root .App div .sedans button, body #root .App div .suvs button, body #root .App div .luxury button {
+  margin-top: 1.5em;
+  border: none;
+  background-color: #f2f2f2;
+  padding: 11px 20px;
+  border-radius: 20px;
+  font-size: 0.7em;
+  font-family: 'Lexend Deca', sans-serif;
+  cursor: pointer;
+}
+
+body #root .App div .sedans button {
+  color: #e38826;
+}
+
+body #root .App div .sedans button:hover {
+  background-color: #e38826;
+  color: #f2f2f2;
+  border: 0.1em solid #f2f2f2;
+}
+
+body #root .App div .suvs button {
+  color: #006970;
+}
+
+body #root .App div .suvs button:hover {
+  background-color: #006970;
+  color: #f2f2f2;
+  border: 0.1em solid #f2f2f2;
+}
+
+body #root .App div .luxury button {
+  color: #004241;
+}
+
+body #root .App div .luxury button:hover {
+  background-color: #004241;
+  color: #f2f2f2;
+  border: 0.1em solid #f2f2f2;
+}
+/*# sourceMappingURL=index.css.map */

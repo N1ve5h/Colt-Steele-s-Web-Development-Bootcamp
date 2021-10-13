@@ -1,0 +1,116 @@
+@mixin desktop {
+    @media (min-width:1440px) {
+        @content
+    }
+}
+
+
+
+body {
+    #root {
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        .App {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop {
+                flex-direction: row;
+            }
+
+            &>:first-child {
+                border-top-left-radius: 0.7em;
+                border-top-right-radius: 0.7em;
+                @include desktop {
+                    border-top-right-radius: 0;
+                    border-bottom-left-radius: 0.7em;
+                }
+            }
+
+            &>:last-child {
+                border-bottom-left-radius: 0.7em;
+                border-bottom-right-radius: 0.7em;
+                @include desktop {
+                    border-bottom-left-radius: 0em;
+                    border-top-right-radius: 0.7em;;
+                }
+            }
+
+            div {
+                @include desktop {
+                    width: 25%;
+                }
+                .sedans, .suvs, .luxury {
+                    width: 70%;
+                    margin: 1.5em auto 3em auto;
+                    @include desktop {
+                        width: 62%;
+                    }
+                    img {
+                        margin-top: 1.5em;
+                        width: 3.5em;
+                    }
+
+                    h1 {
+                        color: hsl(0, 0%, 95%);
+                        font-family: 'Big Shoulders Display', cursive;
+                        font-size: 2em;
+                        margin-top: 1em;
+                    }
+
+                    p {
+                       color:  hsla(0, 0%, 100%, 0.75);
+                       font-size: 0.9em;
+                       line-height: 20px;
+                       margin: 2em 0;
+                       font-family: 'Lexend Deca', sans-serif;
+                       @include desktop {
+                           margin-bottom: 4em;
+                       }
+                    }
+                    
+                    button {
+                        margin-top: 1.5em;
+                        border: none;
+                        background-color:  hsl(0, 0%, 95%);
+                        padding: 11px 20px;
+                        border-radius: 20px;
+                        font-size: 0.7em;
+                        font-family: 'Lexend Deca', sans-serif;
+                        cursor: pointer;
+                    }
+                }
+                .sedans button {
+                    color: hsl(31, 77%, 52%);
+                    &:hover {
+                        background-color: hsl(31, 77%, 52%);
+                        color:  hsl(0, 0%, 95%);
+                        border: .1em solid hsl(0, 0%, 95%);;
+                    }
+                }
+
+                .suvs button {
+                    color: hsl(184, 100%, 22%);
+                    &:hover {
+                        background-color: hsl(184, 100%, 22%);
+                        color:  hsl(0, 0%, 95%);
+                        border: .1em solid hsl(0, 0%, 95%);;
+                    }
+                }
+
+                .luxury button {
+                    color: hsl(179, 100%, 13%);
+                    &:hover {
+                        background-color: hsl(179, 100%, 13%);
+                        color:  hsl(0, 0%, 95%);
+                        border: .1em solid hsl(0, 0%, 95%);;
+                    }
+                }
+                
+                
+            }
+        }
+    }  
+}
