@@ -10,13 +10,13 @@ mongoose
   });
 
 const movieSchema = new mongoose.Schema({
-    title: String,
-    year: Number,
-    score: Number,
-    rating: String
-})
+  title: String,
+  year: Number,
+  score: Number,
+  rating: String,
+});
 
-const Movie = mongoose.model('Movie', movieSchema); //create model
+const Movie = mongoose.model("Movie", movieSchema); //create model
 
 // const amadeus = new Movie({title:'Amadeus', year: 1986, score:9.2, rating: 'R'});
 
