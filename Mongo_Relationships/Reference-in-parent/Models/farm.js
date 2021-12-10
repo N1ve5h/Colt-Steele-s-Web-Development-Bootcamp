@@ -1,0 +1,35 @@
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
+
+mongoose
+  .connect("mongodb://localhost:27017/relationshipDB")
+  .then(() => {
+    console.log("Mongo Database Connected");
+  })
+  .catch((e) => {
+    console.log("Mongo Database not Connected");
+    console.log(e);
+  });
+
+const productSchema = new Schema({
+  name: String,
+  price: Number,
+  season: {
+    type: String,
+    enum: ["Spring", "Summer", "Autumn", "Winter"],
+  },
+});
+
+const Product = mongoose.model("Product", productSchema);
+
+// Product.insertMany([
+//   { name: "Goddess Melon", price: 4.99, season: "Summer" },
+//   { name: "Sugar Baby Watermelon", price: 4.99, season: "Summer" },
+//   { name: "Asparagus", price: 3.99, season: "Spring" },
+// ]);
+
+const farmSchema = new Schema({
+  name: String,
+  city: String,
+  products: [{ type: Schema.Types.ObjectId, ref: "Product" }],
+});
