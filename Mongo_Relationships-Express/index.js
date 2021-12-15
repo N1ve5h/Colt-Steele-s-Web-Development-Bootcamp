@@ -3,7 +3,8 @@ var methodOverride = require('method-override');
 const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
-const Product = require("./product");
+const Product = require("./Models/product");
+const Farm = require("./Models/farm")
 const { urlencoded } = require("express");
 
 mongoose
@@ -21,6 +22,13 @@ app.set('view engine', 'ejs');
 app.use(urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 
+//Farm Routes
+app.get('/farms/new', (req,res) => {
+  res.send('<h1>New Farm</h1>');
+})
+
+
+//Product Routes
 const categories = ['fruit', 'vegetable', 'dairy'];
 
 app.get("/products", async (req, res) => {
