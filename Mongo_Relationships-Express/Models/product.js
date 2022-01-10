@@ -16,13 +16,8 @@ const productSchema = new Schema({
         lowercase: true,
         enum: ['fruit','vegetable','dairy'],
     },
-<<<<<<< HEAD
-    farm: {
-        type: mongoose.Schema.Types.ObjectId,
-=======
     farms: {
         type: Schema.Types.ObjectId,
->>>>>>> c1de93dd0e932e8af923d2418b8e2eaed561862f
         ref: 'Farm'
     }
 })
