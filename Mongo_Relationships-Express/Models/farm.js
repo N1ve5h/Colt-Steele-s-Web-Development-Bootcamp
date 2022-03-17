@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Product = require('./product');
 const { Schema } = mongoose;
 
 const farmSchema = new Schema({
@@ -18,6 +19,13 @@ const farmSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Product'
     }]
+})
+
+farmSchema.post('findOneAndDelete', async (farm) => {
+    if (farm.products.length) {
+        const res = await Product.deleteMany({_id: { $in: farm.products}})
+        console.log(res)
+    }
 })
 
 const Farm = mongoose.model('Farm', farmSchema);
