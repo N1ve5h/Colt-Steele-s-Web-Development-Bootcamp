@@ -41,12 +41,16 @@
     </header>
     <main>
       <div class="container" >
-        <h1>Contact Me</h1>
-        <p class="container" id="contactme">Email: Niveshg@hotmail.com<br>Phone No.: +44 7445 125 354</p>
-        <form action="#nowhere">
+        <h1 class="contactheading">Contact Me</h1>
+        <p class="container" id="contactme">Email: info@nivesh.co.uk<br>Phone No.: +44 7445 125 354</p>
+        <form action="https://formsubmit.co/info@nivesh.co.uk" method="POST">
           <div class="form-group">
-            <label for="email" class="form-label">Email address</label>
+            <label for="email" name="email" class="form-label">Email address</label>
             <input type="email" class="form-control" id="email" placeholder="JohnSmith@outlook.com">
+          </div>
+          <div class="form-group">
+            <label for="Subject" class="form-label">Subject</label>
+            <input class="form-control" id="Subject" type="text" name="_subject" placeholder="Enter Subject Here">
           </div>
           <div class="form-group">
             <label for="TextArea1" class="form-label">Message</label>

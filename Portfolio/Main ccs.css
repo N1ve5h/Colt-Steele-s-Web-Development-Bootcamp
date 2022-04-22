@@ -70,3 +70,11 @@ p {
 #contactme {
   text-align: center;
 }
+
+.contactheading {
+  margin-top: 4rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
